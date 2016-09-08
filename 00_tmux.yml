@@ -1,0 +1,23 @@
+---
+- hosts: all
+  sudo: yes
+  tasks:
+    - apt: name={{item}}
+      with_items:
+        - autoconf
+        - libtool
+        - pkg-config
+        - libevent-dev
+        - libncurses-dev
+    - name: (tmux) git clone
+      git:
+        repo: 'https://github.com/tmux/tmux.git'
+        dest: /usr/local/src/tmux
+        version: '2.2'
+
+    - name: (tmux) make
+      shell: cd /usr/local/src/tmux &&
+            ./autogen.sh &&
+            ./configure --prefix=/usr/local
+            && make && make install
+
