@@ -1,5 +1,9 @@
 # tmux-playbook
 
+<a href='https://travis-ci.org/MaxMEllon/tmux-playbook' />
+  <img src='https://travis-ci.org/MaxMEllon/tmux-playbook.svg?branch=master' />
+</a>
+
 About
 ---
 
