@@ -8,7 +8,7 @@
         - libtool
         - pkg-config
         - libevent-dev
-        - libncurses-dev
+        - libncurses5-dev
     - name: (tmux) git clone
       git:
         repo: 'https://github.com/tmux/tmux.git'
